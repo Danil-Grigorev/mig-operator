@@ -653,7 +653,7 @@ spec:
               serviceAccount: migration-operator
               containers:
               - name: ansible
-                image: quay.io/konveyor/mig-operator-container:latest
+                image: quay.io/dgrigore/operator:latest
                 command:
                 - /usr/local/bin/ao-logs
                 - /tmp/ansible-operator/runner
@@ -664,7 +664,7 @@ spec:
                   name: runner
                   readOnly: true
               - name: operator
-                image: quay.io/konveyor/mig-operator-container:latest
+                image: quay.io/dgrigore/operator:latest
                 imagePullPolicy: Always
                 volumeMounts:
                 - mountPath: /tmp/ansible-operator/runner
